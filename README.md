@@ -5,16 +5,18 @@
 2. 设置ondragstart事件
 3. 在被拖放目标上设置ondrop事件和ondragover事件  
   
->js部分代码
-  function drag(event){
-    event.dataTransfer.setData('Text',event.target.id)//此处需在拖放源上设置id
-  }
-  function drop(event){
-  var data=event.dataTransfer.getData('Text');
-  event.target.appendChild(document.getElementById(data));
-  event.preventDefault;//此处应该阻止浏览器的默认事件
-  }
-  function allowDrag(event){
-  event.preventDefault;
-  }
+>js部分代码  
+  
+
+    function drag(event){
+      event.dataTransfer.setData('Text',event.target.id)//此处需在拖放源上设置id
+    }
+    function drop(event){
+    var data=event.dataTransfer.getData('Text');
+    event.target.appendChild(document.getElementById(data));
+    event.preventDefault;//此处应该阻止浏览器的默认事件
+    }
+    function allowDrag(event){
+    event.preventDefault;
+    }
 
